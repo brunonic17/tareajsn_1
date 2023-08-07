@@ -1,5 +1,5 @@
 let n=5
-let p= "*"
+let p= ""
 
 
 for(let i=0;i<=n;i++){
