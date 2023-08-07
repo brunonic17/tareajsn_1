@@ -1,5 +1,6 @@
 let n=5
-let p= 1
+let p= "*"
+
 
 for(let i=0;i<=n;i++){
     for(let j=0;j<n-i; j++){
@@ -7,8 +8,12 @@ for(let i=0;i<=n;i++){
         p +=" "
       }
        for(let k=0;k<2*i-1; k++){
-        p +=1
+        p +="*"
     }
-    p +="\n"
-  }
-  console.log(p)
+    p+="\n"
+    
+  } 
+
+console.log(p)
+ 
+ 
