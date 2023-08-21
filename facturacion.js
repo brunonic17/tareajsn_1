@@ -8,17 +8,17 @@ var EU="error, porfavor coloque su usuario"
 
 var P="¿Como desea pagar?"
 
-const OP=["Opciones de pago",
-       "1-efectivo",
+const OP=[
+       "1-Efectivo",
        "2-Tarjeta",
        "3-Mercadopago",
        "4-Obra social"]
 
-
+      
 
       
 
-let MpagoOS=["Elija una opcio","1-Pago Total","2-Pago Parcial"]
+let MpagoOS=["1-Pago Total","2-Pago Parcial"]
 
 
 
@@ -28,8 +28,14 @@ let IU=prompt(U)
 
 if(IU){
    let CP=prompt(C)
-    if(CP){
-        let OPP=prompt(OP);
+    if(CP){ 
+        let mop="Opciones de pago"
+        OP.forEach((op) => {
+          mop += "\n" + op;
+        });
+        let OPP=prompt(mop);
+        
+       
         switch(OPP){
         case "1": alert("monto a pagar"+" "+CP) 
          break
@@ -79,7 +85,12 @@ if(IU){
             else{ var mpo= prompt("Por favor,coloque la cuota adecuada")}
           break}while(mpo>12||mpo==null)
          break
-        case "4": do{let pagoOS=prompt(MpagoOS)
+        case "4": do{let mpos="Elija una opción"
+        
+        MpagoOS.forEach((oop) => {
+          mpos += "\n" + oop;
+        });
+          let pagoOS=prompt(mpos)
         if(pagoOS<3) {switch(pagoOS){
           case "1": alert("monto a pagar"+" "+CP) 
            break
